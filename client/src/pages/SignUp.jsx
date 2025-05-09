@@ -120,12 +120,14 @@ function SignUp() {
 
                 <form className="space-y-4" onSubmit={handleSubmit}>
                     <div>
-                        <label className="block text-sm font-medium text-gray-700">
+                        <label htmlFor="username" className="block text-sm font-medium text-gray-700">
                             Username
                         </label>
                         <input
+                            id="username"
                             name="username"
                             type="text"
+                            autoComplete="username"
                             required
                             value={formData.username}
                             onChange={handleChange}
@@ -138,12 +140,14 @@ function SignUp() {
                     </div>
 
                     <div>
-                        <label className="block text-sm font-medium text-gray-700">
+                        <label htmlFor="email" className="block text-sm font-medium text-gray-700">
                             Email
                         </label>
                         <input
+                            id="email"
                             name="email"
                             type="email"
+                            autoComplete="email"
                             required
                             value={formData.email}
                             onChange={handleChange}
@@ -156,14 +160,16 @@ function SignUp() {
                     </div>
 
                     <div>
-                        <label className="block text-sm font-medium text-gray-700">
+                        <label htmlFor="password" className="block text-sm font-medium text-gray-700">
                             Password
                         </label>
                         <div className="relative">
                             <input
+                                id="password"
                                 name="password"
                                 type={showPassword ? "text" : "password"}
                                 required
+                                autoComplete="new-password"
                                 value={formData.password}
                                 onChange={handleChange}
                                 className={`appearance-none block w-full px-3 py-2 border ${
@@ -187,14 +193,16 @@ function SignUp() {
                     </div>
 
                     <div>
-                        <label className="block text-sm font-medium text-gray-700">
+                        <label htmlFor="confirmPassword" className="block text-sm font-medium text-gray-700">
                             Confirm Password
                         </label>
                         <div className="relative">
                             <input
+                                id="confirmPassword"
                                 name="confirmPassword"
                                 type={showConfirmPassword ? "text" : "password"}
                                 required
+                                autoComplete="new-password"
                                 value={formData.confirmPassword}
                                 onChange={handleChange}
                                 className={`appearance-none block w-full px-3 py-2 border ${
